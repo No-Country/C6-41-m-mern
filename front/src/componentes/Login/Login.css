@@ -1,0 +1,76 @@
+body {
+	background: #D9D9D9;
+}
+
+.contenedor {
+	min-height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.login {
+	min-width: 600px;
+	margin-top: 200px;
+	background: #D9D9D9;
+	padding: 20px;
+}
+
+.login > div {
+	margin-bottom: 20px;
+}
+
+.login label {
+	display: block;
+	font-weight: 600;
+	font-size: 14px;
+	margin-bottom: 5px;
+	color: #1f1f1f;
+}
+
+.login input,
+.login textarea {
+	width: 50%;
+	border: 2px solid #e2e2e2;
+	font-size: 18px;
+	padding: 10px;
+	margin-bottom: 5px;
+	color: #1f1f1f;
+}
+
+.login input:focus {
+	outline: none;
+	border: 2px solid #D9D9D9;
+}
+
+.login .error {
+	color: #e92b2d;
+	font-weight: 600;
+	font-size: 12px;
+}
+
+.login button[type="submit"] {
+	display: inline;
+	background: #e2e3d9;
+	font-weight: 600;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 16px;
+	transition: .3s ease all;
+}
+
+.login button[type="submit"]:hover {
+	background: #0051ff;
+}
+
+.login .exito {
+	text-align: center;
+	font-size: 14px;
+	padding-top: 20px;
+	color: #02a802;
+}
+
+.login input[type="radio"] {
+	width: auto;
+}
