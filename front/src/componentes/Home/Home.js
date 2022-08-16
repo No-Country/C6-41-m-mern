@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <div>
         <div>
-          
+        <img src= "" alt="" />
         </div>
         <div>
           <button type="submit" name="btnIniciar" id="btnIniciar" href="https://www.linkedin.com/" className='btn'>Iniciar Sesión</button>
