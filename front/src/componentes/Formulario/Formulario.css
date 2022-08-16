@@ -1,18 +1,30 @@
-
-
+.font {
+ text-align: left;
+}
+.form-control {
+    font-size: 20px;
+    margin: 5px 0px;
+    padding: 4px;
+    width: auto;
+}
 .InputAndPlace{
     display: flex;
     flex-direction: column;
-
-
 }
-
-
-.Container{
-    width: 30%;
+button{
+    color: #0A0908;
+    border: none;
+    padding: 15px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+.container {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
     display: flex;
-   align-content: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-   
 }
-
