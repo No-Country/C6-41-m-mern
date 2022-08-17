@@ -2,14 +2,33 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path'); // para concatenar direcciones con slash
 const { mongoose } = require('./db')
+var cors = require('cors');
 
 
 const app = express();
+app.use(cors());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
+
+var corsOptions = {
+    origin: 'http://localhost:3001',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
+  
+  app.listen(80, function () {
+    console.log('CORS-enabled web server listening on port 80')
+  })
 
 //Configuraciones
 app.set('port', process.env.PORT || 3000)
 
 //Midlewares (funciones que se ejecutan antes de llegar a las rutas)
+
 app.use(morgan('dev')); //Permite ver por consola las peticiones al servidor
 app.use(express.json()); //Permite la comunicacion cliente-servidor en formato JSON
 
