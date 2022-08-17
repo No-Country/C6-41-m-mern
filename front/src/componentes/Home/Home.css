@@ -1,8 +1,16 @@
-body {
-    background-image: url("../Imagenes/logo.png");
-	background: #A9927D;
-}
+
 .btn {
     background-color: #D9D9D9;
     border-radius: 15px;
 }
+
+.Container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: #A9927D;
+}
+
+
+

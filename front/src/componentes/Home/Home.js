@@ -1,18 +1,17 @@
 import React from 'react'
 import "./Home.css"
+import logo from '../Imagenes/logo.png';
+
 
 export const Home = () => {
   return (
-    <div>
-        <div>
-        <img src= "" alt="" />
-        </div>
-        <div>
-          <button type="submit" name="btnIniciar" id="btnIniciar" href="https://www.linkedin.com/" className='btn'>Iniciar Sesión</button>
-          <button type="submit" name="btnEnviar" id="btnEnviar" className='btn'>Iniciar con Google</button>
-          <button type="submit" name="btnEnviar" id="btnEnviar" className='btn'>Iniciar con Facebook</button>
-        </div>
-        <a href="/Formulario">Crea tu cuenta</a>
+    <div className='Container'>
+        
+        <img src= {logo} alt='logo'  />
+        
+        
+          <button type="submit" name="btnIniciar" id="btnIniciar" href="/Principal" className='btn'>Iniciar Compra</button>
+          
     </div>
   )
 }
