@@ -5,40 +5,12 @@ import md5 from 'md5';
 export default class VerProductos extends Component {
     
   
-  state = {
-    clave: '',
-    productos: [],
-    arrayId: [],
-    _id: '',
-    id: '',
-    nombre: '',
-    categoria: '',
-    precio: ''
-  }
+  state = { clave: '', productos: [], arrayId: [], _id: '', id: '', nombre: '', categoria: '', precio: '' }
 
-  onChangeId = e => {
-    this.setState({
-        id: e.target.value
-    })
-  }
-
-  onChangeNombre = e => {
-    this.setState({
-      nombre: e.target.value
-    })
-  }
-  
-  onChangeCategoria = e => {
-    this.setState({
-      categoria: e.target.value
-    })
-  }
-
-  onChangePrecio = e => {
-    this.setState({
-      precio: Number(e.target.value)
-    })
-  }
+  onChangeId = e => { this.setState({ id: e.target.value })}
+  onChangeNombre = e => { this.setState({ nombre: e.target.value })}
+  onChangeCategoria = e => { this.setState({ categoria: e.target.value })}
+  onChangePrecio = e => { this.setState({ precio: Number(e.target.value)})}
 
   remueveClaseActiva = () => {
     const allLi = document.querySelectorAll('li')
@@ -56,7 +28,7 @@ export default class VerProductos extends Component {
       nombre: prop[1],
       categoria: prop[2],
       precio: prop[3].slice(2)
-  })
+    })
   }
 
   componentDidMount() {
@@ -92,50 +64,49 @@ export default class VerProductos extends Component {
   }
 
   nuevoProducto = async() => {
-  const clave = window.prompt(`Esta seguro que desea crear el articulo ${this.state.nombre}`);
-  if(md5(clave) === this.state.clave){
-    await axios.post('http://localhost:3000/api/productos', 
-                {
-                  id: this.state.id,
-                  nombre: this.state.nombre,
-                  categoria: this.state.categoria,
-                  precio: this.state.precio
-                } );
-    
-    this.setState ({
-      id: '',
-      nombre: '',
-      categoria: '',
-      precio: ''
-    })
-    this.cargaItems();
-  } else {
-    window.alert('La contraseña es incorrecta')
-  }
-}
-
-modificarProducto = async() => {
-  const clave = window.prompt(`Esta seguro que desea modificar el articulo ${this.state.nombre}`);
-  if(md5(clave) === this.state.clave){
-    const actualizacion = {
-      _id: this.state._id,
-      id: this.state.id,
-      nombre: this.state.nombre,
-      categoria: this.state.categoria,
-      precio: this.state.precio
-    }
-    await axios.put(`http://localhost:3000/api/productos/`, actualizacion);
-    this.setState ({
+    const clave = window.prompt(`Esta seguro que desea crear el articulo ${this.state.nombre}`);
+    if(md5(clave) === this.state.clave){
+      await axios.post('http://localhost:3000/api/productos', 
+                  {
+                    id: this.state.id,
+                    nombre: this.state.nombre,
+                    categoria: this.state.categoria,
+                    precio: this.state.precio
+                  } );
+      this.setState ({
         id: '',
         nombre: '',
         categoria: '',
         precio: ''
-    })
-    this.cargaItems();
+      })
+      this.cargaItems();
     } else {
       window.alert('La contraseña es incorrecta')
     }
-  }
+}
+
+  modificarProducto = async() => {
+    const clave = window.prompt(`Esta seguro que desea modificar el articulo ${this.state.nombre}`);
+    if(md5(clave) === this.state.clave){
+      const actualizacion = {
+          _id: this.state._id,
+          id: this.state.id,
+          nombre: this.state.nombre,
+          categoria: this.state.categoria,
+          precio: this.state.precio
+          }
+      await axios.put(`http://localhost:3000/api/productos/`, actualizacion);
+      this.setState ({
+          id: '',
+          nombre: '',
+          categoria: '',
+          precio: ''
+      })
+      this.cargaItems();
+      } else {
+        window.alert('La contraseña es incorrecta')
+      }
+    }
 
 eliminarProducto = async() => {
     const clave = window.prompt(`Esta seguro que desea eliminar el articulo ${this.state.nombre} \n Ingrese la clave`);
