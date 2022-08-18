@@ -34,7 +34,7 @@ const NavBar = () => {
     <AppBar position="static" color="grey">
       <Container maxWidth="xl">
         <Toolbar disableGutters >
-          <Link to='Principal' >
+          <Link to='Home' >
 
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}  />
           </Link>
