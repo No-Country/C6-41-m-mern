@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router(); //Devuelve un objeto en el cual se pueden ingresar rutas
 const Venta = require('../models/ventas')
 const Productos = require('../models/productos')
+const Clave = require('../models/clave')
 
 router.get('/ventas', async function(req, res) {
     const ventas = await Venta.find();
@@ -43,5 +44,10 @@ router.put('/productos/', async function(req,res) {
     })
     res.json('Producto modificado')
 })
+
+router.get('/claveAdmin', async function(req, res) {
+    const clave = await Clave.find();
+    res.json(clave);
+});
 
 module.exports = router;
