@@ -12,6 +12,7 @@ export const Home = () => {
         
           <button type="submit" name="btnIniciar" id="btnIniciar" href="/Principal" className='btn'>Iniciar Compra</button>
           
+          
     </div>
   )
 }

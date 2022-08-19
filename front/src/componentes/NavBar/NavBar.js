@@ -10,7 +10,6 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import "./NavBar.css"
 import { Link } from 'react-router-dom';
 
 const pages = ['Promociones', 'Combos', 'Adicionales'];
