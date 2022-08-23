@@ -3,12 +3,13 @@ import "../Card/Card.css"
 
 
 
-function Card({img}) {
+function Card({img, title}) {
 
   return (
     <div className='card-container'>
       <div className='image-container'>
-        <img src={img} alt='' />
+        <h3 className='card-title'>{title}</h3>
+        <img src={img} alt='' className='img-producto'/>
       </div>
     </div>
   )

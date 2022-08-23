@@ -30,7 +30,6 @@ function Slider({ imagenes }) {
 						}>
 						{imagenActual === index && (
                             <>
-                            <h1>{imagen.nombre}</h1>
 							<img key={index} src={imagen.imagen} alt="imagen" className={estilos.img} />
                             </>						)}
 					</div>

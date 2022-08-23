@@ -1,12 +1,17 @@
 .container {
 	width: 600px;
-	height: 100%;
-	display: flex;
+	display: inline-flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	background-color: #eee;
-    margin: 70px;
+	overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    transition: 0.3s;
+    animation: ease-in;
+    background-color: #f8f1e9;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 25px;
 }
 
 .slide {
