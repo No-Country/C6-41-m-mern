@@ -1,14 +1,20 @@
 import React from 'react'
-import './Home.css';
+import "./Home.css"
+import logo from '../Imagenes/logo.png';
 
-const Home = () => {
+
+export const Home = () => {
   return (
-    <div className="home">
+    <div className='Container'>
         
-    <h1>Home</h1>
+        <img src= {logo} alt='logo'  />
+        
+        
+          <button type="submit" name="btnIniciar" id="btnIniciar" href="/Principal" className='btn'>Iniciar Compra</button>
+          
+          
     </div>
-
   )
 }
 
-export default Home
+export default Home;
