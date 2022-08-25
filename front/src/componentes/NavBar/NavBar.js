@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { Link } from 'react-router-dom';
 
 const pages = ['Promociones', 'Combos', 'Adicionales'];
@@ -33,9 +33,9 @@ const NavBar = () => {
     <AppBar position="static" color="grey">
       <Container maxWidth="xl">
         <Toolbar disableGutters >
-          <Link to='Home' >
+          <Link to='Principal' >
 
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}  />
+          <FastfoodIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}  />
           </Link>
             
      
@@ -78,7 +78,7 @@ const NavBar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <FastfoodIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap

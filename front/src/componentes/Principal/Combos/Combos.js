@@ -16,7 +16,8 @@ function Combos () {
 
 
   return (
-    <div>
+
+    <div> 
       <Card
       title='COMBO DE POLLO'
       img={combopollo}

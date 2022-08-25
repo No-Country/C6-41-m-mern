@@ -2,7 +2,7 @@ import React from 'react'
 import Slider from '../Slider/Slider';
 import amigos from '../../Imagenes/promoamigos.png'
 import familiar from '../../Imagenes/promofamiliar.png'
-import promox2 from '../../Imagenes/Promox2.png'
+import promox2 from '../../Imagenes/promox2.png'
 
 
 
