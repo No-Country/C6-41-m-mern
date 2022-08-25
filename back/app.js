@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 });
 
 var corsOptions = {
-    origin: 'http://localhost:3001',
+    origin: 'http://localhost:5000',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
   
@@ -25,7 +25,7 @@ var corsOptions = {
   })
 
 //Configuraciones
-app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 5000)
 
 //Midlewares (funciones que se ejecutan antes de llegar a las rutas)
 
