@@ -23,6 +23,9 @@ const productosSchema = new Schema(
             type: Number,
             required: true
         },
+        ruta: {
+            type: String
+        }
     },
     {
     versionKey: false,
