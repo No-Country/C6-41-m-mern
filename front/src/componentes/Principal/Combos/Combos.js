@@ -12,43 +12,63 @@ import especial3 from '../../Imagenes/triplespe.png'
 
 
 
+
+
+
 function Combos () {
+
 
 
   return (
 
     <div> 
       <Card
-      title='COMBO DE POLLO'
+      title='POLLO'
       img={combopollo}
+      nombre=''
+      precio={20}
       />
       <Card
       title='TRIPLE EN COMBO'
       img={combotriple}
+      nombre=''
+      precio={20}
       />
       <Card
       title=''
       img={veggie}
+      nombre=''
+      precio={20}
       />
       <Card
       title='VEGGIE'
       img={combodoble}
+      nombre=''
+      precio={20}
       />
       <Card
       title='DOBLE ESPECIAL'
       img={especial1}
+      nombre=''
+      precio={20}
       />
       <Card
       title='ESPECIAL DE LA CASA'
       img={especial2}
+      nombre=''
+      precio={20}
       />
       <Card
       title='ENSALADA TRES GUSTOS'
       img={ensalada}
+      nombre=''
+      precio={20}
       />
       <Card
       title='ESPECIAL TRIPLE'
       img={especial3}
+      nombre=''
+      precio={20}
       />
     </div>
   )

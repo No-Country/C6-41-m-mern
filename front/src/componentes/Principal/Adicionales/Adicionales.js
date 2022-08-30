@@ -18,26 +18,33 @@ function Adicionales () {
       <Card
       title='DOBLE ESPECIAL'
       img={doble}
+      precio= { '$1400' }
+      id='100'
       />
       <Card
-      title='PAPAS'
+      nombre='PAPAS'
       img={papas}
+      precio={20}
       />
       <Card
-      title='POLLO CRUJIENTE'
+      nombre='COMBO POLLO'
       img={pollo}
+      precio={20}
       />
       <Card
-      title='BEBIDAS'
+      nombre='BEBIDAS'
       img={bebida}
+      precio={20}
       />
       <Card
-      title='VEGGIE ESPECIAL'
+      nombre='VEGGIE ESPECIAL'
       img={veggie}
+      precio={20}
       />
       <Card
-      title='NUGGETS'
+      nombre='NUGGETS'
       img={nuggets}
+      precio={20}
       />
     </div>
   )

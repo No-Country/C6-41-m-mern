@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
 import estilos from './Slider.module.css';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 function Slider({ imagenes }) {
 	// Variables y Estados
@@ -19,7 +21,7 @@ function Slider({ imagenes }) {
 
 	return (
 		<div className={estilos.container}>
-			<button onClick={anteriorImagen}>←</button>
+			<ArrowBackIosIcon onClick={anteriorImagen}></ArrowBackIosIcon>
 			{imagenes.map((imagen, index) => {
 				return (
 					<div
@@ -30,12 +32,13 @@ function Slider({ imagenes }) {
 						}>
 						{imagenActual === index && (
                             <>
-							<img key={index} src={imagen.imagen} alt="imagen" className={estilos.img} />
-                            </>						)}
+							<img key={index} src={imagen.imagen} alt="imagen" className={estilos.imgSlider} />
+                            </>						
+							)}
 					</div>
 				);
 			})}
-			<button onClick={siguienteImagen}>→</button>
+			<ArrowForwardIosIcon onClick={siguienteImagen}></ArrowForwardIosIcon>
 		</div>
 	);
 }

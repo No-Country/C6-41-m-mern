@@ -1,17 +1,19 @@
 import React from 'react'
 import "./Home.css"
 import logo from '../Imagenes/logo.png';
+import { Link } from 'react-router-dom';
 
 
 export const Home = () => {
   return (
-    <div className='Container'>
+    <div>
         
-        <img src= {logo} alt='logo'  />
+        <img src= {logo} alt='logo' className='Container' />
         
-        
-          <button type="submit" name="btnIniciar" id="btnIniciar" href="/Principal" className='btn'>Iniciar Compra</button>
-          
+
+          <Link to="../principal">
+          <button type="submit" name="btnIniciar" id="btnIniciar" className='btn'>Iniciar Compra</button>
+          </Link> 
           
     </div>
   )
