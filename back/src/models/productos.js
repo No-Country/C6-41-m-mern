@@ -16,6 +16,9 @@ const productosSchema = new Schema(
             type: String, 
             required: true
         },
+        descripcion: {
+            type: String
+        },
         precio: {
             type: Number,
             required: true
