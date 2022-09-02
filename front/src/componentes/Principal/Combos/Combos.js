@@ -28,7 +28,7 @@ function Combos() {
       <div>
         {products.map((product) => {
           return !getCarritoItems().some((item) => item._id === product._id) ? (
-            <Card precio={product.price} title={product.name} img={product.ruta}  />
+            <Card precio={product.precio} title={product.nombre} img={product.ruta}  />
           ) : null;
         })}
       </div>
