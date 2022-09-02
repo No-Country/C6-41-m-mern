@@ -1,8 +1,8 @@
 import React from 'react'
 import Slider from '../Slider/Slider';
-import amigos from '../../Imagenes/promoamigos.png'
-import familiar from '../../Imagenes/promofamiliar.png'
-import promox2 from '../../Imagenes/promox2.png'
+import capuchino from '../../Imagenes/papas.png'
+import familiar from '../../Imagenes/medialunas.png'
+import promox2 from '../../Imagenes/nuggets.png'
 
 
 
@@ -13,8 +13,8 @@ const Promociones = () => {
 
   const Promociones = [
     {
-      imagen: amigos,
-      nombre: 'PROMO DEL DÍA'
+      imagen: capuchino,
+      nombre: 'CAPUCCHINO'
     },
     {
       imagen: familiar,

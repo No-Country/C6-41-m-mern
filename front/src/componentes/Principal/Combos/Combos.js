@@ -1,77 +1,48 @@
-import React from 'react'
-import Card from '../Card/Card'
-import veggie from '../../Imagenes/comboveggie.png'
-import combopollo from '../../Imagenes/combopollo.png'
-import combotriple from '../../Imagenes/combotriple.png'
-import combodoble from '../../Imagenes/combodoble.png'
-import ensalada from '../../Imagenes/ensalada.png'
-import especial1 from '../../Imagenes/doblespe.png'
-import especial2 from '../../Imagenes/especial.png'
-import especial3 from '../../Imagenes/triplespe.png'
+import Card from "../Card/Card";
+import React, { useState, useEffect } from "react";
 
+import useCarrito from "../../../context/useCarrito";
+import { Link } from "react-router-dom";
 
+function Combos() {
+  const [products, setProducts] = useState(null);
+  const { getCarritoItems } = useCarrito();
+  const [loading, setLoading] = useState(true);
 
-
-
-
-
-function Combos () {
-
-
+  useEffect(() => {
+    fetch(`http://localhost:5000/api/productos`)
+      .then((response) => response.json())
+      .then((response) => {
+        setProducts(response);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   return (
-
-    <div> 
-      <Card
-      title='POLLO'
-      img={combopollo}
-      nombre=''
-      precio={20}
-      />
-      <Card
-      title='TRIPLE EN COMBO'
-      img={combotriple}
-      nombre=''
-      precio={20}
-      />
-      <Card
-      title=''
-      img={veggie}
-      nombre=''
-      precio={20}
-      />
-      <Card
-      title='VEGGIE'
-      img={combodoble}
-      nombre=''
-      precio={20}
-      />
-      <Card
-      title='DOBLE ESPECIAL'
-      img={especial1}
-      nombre=''
-      precio={20}
-      />
-      <Card
-      title='ESPECIAL DE LA CASA'
-      img={especial2}
-      nombre=''
-      precio={20}
-      />
-      <Card
-      title='ENSALADA TRES GUSTOS'
-      img={ensalada}
-      nombre=''
-      precio={20}
-      />
-      <Card
-      title='ESPECIAL TRIPLE'
-      img={especial3}
-      nombre=''
-      precio={20}
-      />
+    <div>
+      {loading == true ? (<></>) : (
+        <>
+      <div>
+        {products.map((product) => {
+          return !getCarritoItems().some((item) => item._id === product._id) ? (
+            <Card precio={product.price} title={product.name} img={product.ruta}  />
+          ) : null;
+        })}
+      </div>
+      <div>
+        {getCarritoItems()?.length > 0 ? (
+          <Link to={"/Finalizar"} key={"Ver Carrito"}>
+            <button>Ver Carrito</button>
+          </Link>
+        ) : null}
+      </div>
+      </>
+      )}
     </div>
-  )
+  );
 }
 
-export default Combos
+export default Combos;
