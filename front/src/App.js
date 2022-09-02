@@ -1,27 +1,26 @@
-import './App.css';
-import Home from './componentes/Home/Home';
-import Login from './componentes/Login/Login';
-
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Formulario from './componentes/Formulario/Formulario';
-import NavBar from './componentes/NavBar/NavBar';
+import Home from "./componentes/Home/Home";
+import NavBar from "./componentes/NavBar/NavBar";
+import Principal from "./componentes/Principal/Principal";
+import Finalizar from "./componentes/Principal/Finalizar/Finalizar";
+import { ContextProvider } from "./context/Context";
 
 function App() {
   return (
-    <div className="App">
-          <BrowserRouter>
+    <ContextProvider>
+      <div className="App">
+        <BrowserRouter>
           <NavBar></NavBar>
-           <Routes>
-          
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/Login" element={<Login />}></Route>
-          <Route path="/Registro" element={<Formulario />}></Route>
-          
-        </Routes>
-        
-
-      </BrowserRouter>
-    </div>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/home" element={<Home />}></Route>
+            <Route path="/Principal" element={<Principal />}></Route>
+            <Route path="/Finalizar" element={<Finalizar></Finalizar>}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </ContextProvider>
   );
 }
 

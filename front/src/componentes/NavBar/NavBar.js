@@ -1,36 +1,46 @@
-import React from 'react'
+import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import FastfoodIcon from '@mui/icons-material/Fastfood';
+import { Link } from 'react-router-dom';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-const NavBar = () => {
+export default function ButtonAppBar() {
   return (
-    <div>
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" color="grey">
         <Toolbar>
-          <IconButton
+        <Link to='Home' >
+          <FastfoodIcon
             size="large"
             edge="start"
-            color="inherit"
+            color="black"
             aria-label="menu"
-            sx={{ mr: 2 }}
-          >
+            sx={{ mr: 2 }}>
             <MenuIcon />
-          </IconButton>
+          </FastfoodIcon>
+          </Link>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-           hola
+           Principal
           </Typography>
-          <Button color="inherit" href="/Login">Login</Button>
+          
+          
+          <Link to='Finalizar' >
+          <ShoppingCartIcon
+            size="large"
+            edge="start"
+            color="black"
+            aria-label="menu"
+            sx={{ mr: 2 }}>
+            <MenuIcon />
+          </ShoppingCartIcon>
+          </Link>
+       
         </Toolbar>
       </AppBar>
     </Box>
-    </div>
-  )
+  );
 }
-
-export default NavBar
