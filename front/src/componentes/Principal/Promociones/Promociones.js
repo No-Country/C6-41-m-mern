@@ -1,8 +1,6 @@
 import React from 'react'
 import Slider from '../Slider/Slider';
-import capuchino from '../../Imagenes/papas.png'
-import familiar from '../../Imagenes/medialunas.png'
-import promox2 from '../../Imagenes/nuggets.png'
+
 
 
 
@@ -13,15 +11,15 @@ const Promociones = () => {
 
   const Promociones = [
     {
-      imagen: capuchino,
+      imagen: process.env.PUBLIC_URL + 'Imagenes/papas.png',
       nombre: 'CAPUCCHINO'
     },
     {
-      imagen: familiar,
+      imagen: process.env.PUBLIC_URL +'Imagenes/papas.png' ,
       nombre: 'FAMILIAR'
     },
     {
-      imagen: promox2,
+      imagen:  process.env.PUBLIC_URL +'Imagenes/papas.png',
       nombre: 'PARA COMPARTIR'
     }
    
