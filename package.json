@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "mocha -w ./tests/**/*.spec.js"
+    "start": "node app.js"
   },
   "author": "dmaceda",
   "license": "ISC",
@@ -21,7 +20,7 @@
     "express": "^4.18.1",
     "ioredis": "^4.19.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.5.2",
+    "mongoose": "^6.5.4",
     "morgan": "^1.10.0",
     "pg": "^8.5.1",
     "sequelize": "^6.3.5"
