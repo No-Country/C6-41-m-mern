@@ -11,15 +11,15 @@ const Promociones = () => {
 
   const Promociones = [
     {
-      imagen: process.env.PUBLIC_URL + 'Imagenes/papas.png',
+      imagen: process.env.PUBLIC_URL + 'Imagenes/promox1.png',
       nombre: 'CAPUCCHINO'
     },
     {
-      imagen: process.env.PUBLIC_URL +'Imagenes/papas.png' ,
+      imagen: process.env.PUBLIC_URL +'Imagenes/cuarto.png' ,
       nombre: 'FAMILIAR'
     },
     {
-      imagen:  process.env.PUBLIC_URL +'Imagenes/papas.png',
+      imagen:  process.env.PUBLIC_URL +'Imagenes/simple.png',
       nombre: 'PARA COMPARTIR'
     }
    
