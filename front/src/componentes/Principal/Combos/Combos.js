@@ -1,5 +1,6 @@
 import Card from "../Card/Card";
 import React, { useState, useEffect } from "react";
+import '../../Home/Home.css'
 
 import useCarrito from "../../../context/useCarrito";
 import { Link } from "react-router-dom";
@@ -35,7 +36,7 @@ function Combos() {
       <div>
         {getCarritoItems()?.length > 0 ? (
           <Link to={"/Finalizar"} key={"Ver Carrito"}>
-            <button >Ver Carrito</button>
+            <button className="btn">Ver Carrito</button>
           </Link>
         ) : null}
       </div>
