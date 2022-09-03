@@ -37,7 +37,7 @@ const rutaBase = '/api' //Para definir cual sera la ruta base de la API
 app.use(rutaBase, require('./src/routes/index'));
 
 //Archivos estaticos
-app.use(express.static(path.join(__dirname, 'front/public'))); //Dice la ruta donde estan los archivos estaticos
+app.use(express.static(path.join(__dirname, '../front/public'))); //Dice la ruta donde estan los archivos estaticos
 
 //Arranque del servidor
 const puerto = app.get('port');

@@ -1,11 +1,11 @@
 .card-container {
     width: 300px;
-    height: 300px;
+    height: 350px;
     overflow: hidden;
     box-shadow: 0px 0px 15px -5px;
     transition: 0.3s;
     animation: ease-in;
-    background-color: #f8f1e9;
+    background-color: #ffffff;
     display: inline-block;
     padding: 5px;
     border-radius: 8px;
