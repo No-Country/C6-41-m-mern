@@ -35,7 +35,7 @@ function Combos() {
       <div>
         {getCarritoItems()?.length > 0 ? (
           <Link to={"/Finalizar"} key={"Ver Carrito"}>
-            <button>Ver Carrito</button>
+            <button >Ver Carrito</button>
           </Link>
         ) : null}
       </div>

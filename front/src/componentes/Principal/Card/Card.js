@@ -17,7 +17,7 @@ function Card({  title, precio, img}) {
         <img className='img-producto' src={uri_imagenes+img} alt={title}></img>
         <h3 className='card-title'>${precio}</h3>
       </div>
-      <CardFinish></CardFinish>
+      <CardFinish title={title} precio={precio} foto={img}></CardFinish>
     </div>
     
   )

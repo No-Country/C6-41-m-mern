@@ -8,8 +8,8 @@ const useCarrito = () => {
    * Agregar producto (agregar el objeto)
    * @param {object} objeto
    */
-  const addItem = (newItem, unidades) => {
-    setCarritoItems((prev) => [...prev, { ...newItem, unidades: unidades }]);
+  const addItem = (newItem, unidades,foto,precio) => {
+    setCarritoItems((prev) => [...prev, { ...newItem, unidades: unidades, foto: foto , precio: precio}]);
   };
 
   /**

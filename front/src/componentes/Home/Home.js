@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 
 export const Home = () => {
   return (
-    <div>
+    <div className='Container'>
         
-        <img src= '../Imagenes/logo.png' alt='logo' className='Container' />
+        <img src= '../Imagenes/logo.png' alt='logo' className='imagen' />
         
 
           <Link to="../principal">
